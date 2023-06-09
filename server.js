@@ -16,5 +16,6 @@ app.listen(4000, () => {
     )
     .then(() => {
       console.log("listening on http://localhost:4000");
-    });
+    })
+    .catch((err) => console.log(err));
 });

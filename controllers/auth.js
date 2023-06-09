@@ -1,6 +1,7 @@
 const User = require("../models/user");
 
 exports.registerUser = async (req, res) => {
+  res.json("Api Page");
   const { email, password } = req.body;
 
   try {

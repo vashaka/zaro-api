@@ -12,7 +12,7 @@ app.get("/", (req, res) => {
 });
 app.use(authRoutes);
 
-const port = "https://zaro-api.vercel.app/";
+const port = 4000 || "https://zaro-api.vercel.app/";
 
 app.listen(port, () => {
   mongoose

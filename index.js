@@ -6,6 +6,7 @@ const mongoose = require("mongoose");
 
 app.use(
   cors({
+    credentials: true,
     origin: "http://localhost:3000", // Replace with the domain of your frontend application
   })
 );

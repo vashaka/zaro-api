@@ -20,13 +20,28 @@ app.use((req, res, next) => {
 //     origin: "http://localhost:3000", // Replace with the domain of your frontend application
 //   })
 // );
-app.use(express.json());
+// app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.send("Hello");
+app.post("/api/register", async (req, res) => {
+  const { email, password } = req.body;
+
+  try {
+    const userDoc = await User.create({
+      email,
+      password,
+    });
+    console.log(userDoc);
+    res.status(200).json(userDoc);
+  } catch (err) {
+    console.log(err);
+  }
 });
 
-app.use(authRoutes);
+// app.get("/", (req, res) => {
+//   res.send("Hello");
+// });
+
+// app.use(authRoutes);
 
 const port = 4000 || "https://zaro-api.vercel.app/";
 

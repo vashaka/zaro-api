@@ -23,6 +23,7 @@ app.use((req, res, next) => {
 // app.use(express.json());
 
 app.post("/api/register", async (req, res) => {
+  console.log("OKK");
   const { email, password } = req.body;
 
   try {

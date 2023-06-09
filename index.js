@@ -7,6 +7,9 @@ const mongoose = require("mongoose");
 app.use(cors());
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("Hello");
+});
 app.use(authRoutes);
 
 app.listen(4000, () => {

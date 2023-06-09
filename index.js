@@ -14,6 +14,10 @@ app.use(express.json());
 app.get("/", (req, res) => {
   res.send("Hello");
 });
+
+app.get("/apie", (req, res) => {
+  res.send("Hello Agin");
+});
 app.use(authRoutes);
 
 const port = 4000 || "https://zaro-api.vercel.app/";

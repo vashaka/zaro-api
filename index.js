@@ -4,12 +4,22 @@ const app = express();
 const cors = require("cors");
 const mongoose = require("mongoose");
 
-app.use(
-  cors({
-    credentials: true,
-    origin: "https://zaro-client.vercel.app/", // Replace with the domain of your frontend application
-  })
-);
+app.use((req, res, next) => {
+  res.setHeader(
+    "Access-Control-Allow-Origin",
+    "https://zaro-client.vercel.app"
+  );
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  next();
+});
+
+// app.use(
+//   cors({
+//     credentials: true,
+//     origin: "http://localhost:3000", // Replace with the domain of your frontend application
+//   })
+// );
 app.use(express.json());
 
 app.get("/", (req, res) => {

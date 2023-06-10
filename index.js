@@ -18,7 +18,7 @@ const User = require("./models/user");
 app.use(
   cors({
     credentials: true,
-    origin: "http://localhost:3000", // Replace with the domain of your frontend application
+    origin: "https://zaro-client.vercel.app", // Replace with the domain of your frontend application
   })
 );
 app.use(express.json());

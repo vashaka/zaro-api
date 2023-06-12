@@ -51,7 +51,7 @@ app.post("/api/register", async (req, res) => {
 
 const port = "https://zaro-api.vercel.app/";
 
-app.listen(4000, () => {
+app.listen(port, () => {
   mongoose
     .connect(
       "mongodb+srv://vashaka:Data932868@cluster0.3grsihl.mongodb.net/?retryWrites=true&w=majority"

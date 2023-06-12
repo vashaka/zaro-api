@@ -27,7 +27,7 @@ app.get("/", function (req, res) {
   res.send("OKK");
 });
 
-app.post("/", async (req, res) => {
+app.post("/api/register", async (req, res) => {
   console.log("OKK");
   const { email, password } = req.body;
 
